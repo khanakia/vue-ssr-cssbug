@@ -1,4 +1,4 @@
-import vue from 'rollup-plugin-vue'
+import vue from '@vitejs/plugin-vue'
 import postcss from 'rollup-plugin-postcss'; // v4.0.0
 
 export default [
@@ -9,9 +9,7 @@ export default [
       file: 'dist/MyComponent.esm.js'
     },
     plugins: [
-      vue({
-        preprocessStyles: true
-      }),
+      vue(),
       postcss()
     ]
   },
